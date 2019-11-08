@@ -60,3 +60,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Gems added later
+gem 'rails_admin', '~> 2.0' # https://github.com/sferik/rails_admin
+gem 'devise'  # https://github.com/plataformatec/devise 
+gem "paranoia", "~> 2.2"  # https://github.com/rubysherpas/paranoia
+gem 'dotenv-rails', groups: [:development, :test] # https://github.com/bkeepers/dotenv
+gem 'kaminari'  # https://github.com/kaminari/kaminari
