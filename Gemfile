@@ -63,7 +63,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Gems added later
 gem 'rails_admin', '~> 2.0' # https://github.com/sferik/rails_admin
-gem 'devise'  # https://github.com/plataformatec/devise 
-gem "paranoia", "~> 2.2"  # https://github.com/rubysherpas/paranoia
+gem 'devise'                # https://github.com/plataformatec/devise 
 gem 'dotenv-rails', groups: [:development, :test] # https://github.com/bkeepers/dotenv
-gem 'kaminari'  # https://github.com/kaminari/kaminari
+gem 'kaminari'              # https://github.com/kaminari/kaminari
+gem 'redcarpet', '~> 2.3.0' # https://github.com/vmg/redcarpet
+gem 'coderay'               # https://github.com/rubychan/coderay
