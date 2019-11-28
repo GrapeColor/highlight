@@ -23,6 +23,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    redirect_to action: :index if @article.user != current_user
     @page_title = "Highlight.edit"
   end
 
