@@ -10,7 +10,7 @@ User.create([
   {
     id: 1,
     email: 'info@wired-n.com',
-    password: ENV['ADMIN_PASSWORD'],
+    password: 'takasakiD51-498',
     name: 'Admin',
     admin: true
   }

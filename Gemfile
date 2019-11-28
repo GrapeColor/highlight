@@ -72,7 +72,6 @@ gem 'rails-i18n', '~> 5.1'  # https://github.com/svenfuchs/rails-i18n
 gem 'devise'                # https://github.com/plataformatec/devise
 gem 'devise-i18n'           # https://github.com/tigrish/devise-i18n
 gem 'devise-i18n-views'     # https://github.com/mcasimir/devise-i18n-views
-gem 'dotenv-rails'          # https://github.com/bkeepers/dotenv
 gem 'kaminari'              # https://github.com/kaminari/kaminari
 gem 'redcarpet', '~> 2.3.0' # https://github.com/vmg/redcarpet
 gem 'coderay'               # https://github.com/rubychan/coderay
