@@ -21,7 +21,5 @@ module Highlight
 
     config.i18n.available_locales = :ja
     config.i18n.default_locale = :ja
-
-    Dotenv.load
   end
 end
