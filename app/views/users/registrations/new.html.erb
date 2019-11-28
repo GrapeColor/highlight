@@ -1,29 +1,32 @@
-<h2>Sign up</h2>
+<div class="page-content">
+  <h2>会員登録</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "mdl-textfield__input" %>
+      <%= f.label :email, class: "mdl-textfield__label" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <%= f.password_field :password, autocomplete: "new-password", class: "mdl-textfield__input" %>
+      <% if @minimum_password_length %>
+        <%= f.label :password, class: "mdl-textfield__label" %>
+      <% else %>
+        <%= f.label :password, "パスワード（#{@minimum_password_length}文字以上）", class: "mdl-textfield__label" %>
+      <% end %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "mdl-textfield__input" %>
+      <%= f.label :password_confirmation, class: "mdl-textfield__label" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+    <div class="actions">
+      <%= f.submit "登録", class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+    </div>
+  <% end %>
 
-<%= render "users/shared/links" %>
+  <%= render "users/shared/links" %>
+</div>

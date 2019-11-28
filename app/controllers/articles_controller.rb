@@ -1,33 +1,39 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.page(params[:page]).reverse_order
+    @page_title = "Highlight.index"
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @page_title = "Highlight.show"
   end
 
   # GET /articles/new
   def new
     @article = Article.new
+    @page_title = "Highlight.new"
   end
 
   # GET /articles/1/edit
   def edit
+    @page_title = "Highlight.edit"
   end
 
   # POST /articles
   # POST /articles.json
   def create
     @article = Article.new(article_params)
+    @article.user_id = current_user.id
 
     respond_to do |format|
-      if @article.save
+      if @article.save!
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
@@ -69,6 +75,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.fetch(:article, {})
+      params.require(:article).permit(:title, :body)
     end
 end

@@ -1,3 +1,11 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.article-area {
+  h1 { font-size: 28.8px; }
+  h2 { font-size: 25.6px; }
+  h3 { font-size: 22.4px; }
+  h4 { font-size: 19.2px; }
+  h5, h6 { font-size: 16px; }
+}
